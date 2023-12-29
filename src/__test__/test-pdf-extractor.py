@@ -2,15 +2,15 @@ import unittest
 import sys
 sys.path.append('/workspaces/Chatbot-Builder/src/data_format_tools/text_extraction')
 
-from pdf_text_extraction import extract_text_from_pdf
+from text_extraction import pdf_extract
 
 class TestPDFExtractor(unittest.TestCase):
     def test_extract_text_from_pdf(self):
         # Path to the noisy PDF file
-        testing_path = "src/__test__/pdf/noisy_text.pdf"
+        testing_path = "src/__test__/test_files/noisy_text.pdf"
 
         # Extract text from the PDF using the function
-        extracted_text = extract_text_from_pdf(testing_path)
+        extracted_text = pdf_extract(testing_path)
 
         # Expected result that will be compared to the extracted text
         expected_result = r'''Go/F+O6a9LWbqA@B~eRx8FuZMv||ykIE]V"/YC5WH</jL{nWy[y,YmWTTnx<>+)n6i@<#tJtKV^FH'
@@ -35,10 +35,10 @@ a(>TTn=`w:)mg-Ne.dl7$R0">1u.7mj92u$}'2*T19Ee(Dmw.>HWyyaWT?`
 
     def test_extract_text_from_pdf_2(self):
         # Path to the noisy PDF file
-        testing_path = "src/__test__/pdf/noisy_text2.pdf"
+        testing_path = "src/__test__/test_files/noisy_text2.pdf"
 
         # Extract text from the PDF using the function
-        extracted_text = extract_text_from_pdf(testing_path)
+        extracted_text = pdf_extract(testing_path)
 
         # Expected result that will be compared to the extracted text
         expected_result = r''']I~e~j{kKn9;d0l6nZ_4poBtXgX9sV`)SR-0j<$IKwwLAaZkr*\z%Rq
