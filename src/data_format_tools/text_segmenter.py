@@ -3,7 +3,7 @@ import tiktoken
 nltk.download('punkt')
 
 class DocumentSegmenter():
-    def __init__(self, document, token_limit=3500, max_token_limit=4096, model="gpt-3.5-turbo-1106"):
+    def __init__(self, document, token_limit=2800, max_token_limit=3500, model="gpt-3.5-turbo-1106"):
         self.document = document
         self.token_limit = token_limit
         self.max_token_limit = max_token_limit
